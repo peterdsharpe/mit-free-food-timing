@@ -67,7 +67,7 @@ plt.xlim(*valid_range)
 plt.gcf().autofmt_xdate(rotation=45, ha='center')
 
 show_plot(
-    "Email Latency of free-food@mit.edu and free-foods@mit.edu",
+    f"Email Latency of free-food@mit.edu and free-foods@mit.edu (N={len(times)})",
     "Receipt Time",
     pretty_grids=False,
     show=False
