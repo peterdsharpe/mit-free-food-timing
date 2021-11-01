@@ -9,7 +9,11 @@ sns.set_style('ticks')
 times = np.array(times)
 
 valid_range = (
-    datetime(year=1900, month=1, day=1, hour=18),
+    datetime(year=1900, month=1, day=1, hour=18, minute=42),
+    datetime(year=1900, month=1, day=1, hour=21)
+)
+plot_range = (
+    datetime(year=1900, month=1, day=1, hour=18, minute=30),
     datetime(year=1900, month=1, day=1, hour=21)
 )
 
@@ -63,7 +67,7 @@ plt.text(
 ax.xaxis.set_major_formatter(time_formatter)
 ax.xaxis.set_major_locator(mpl.dates.MinuteLocator([0, 30]))
 ax.xaxis.set_minor_locator(mpl.dates.MinuteLocator([0, 10, 20, 30, 40, 50]))
-plt.xlim(*valid_range)
+plt.xlim(*plot_range)
 plt.gcf().autofmt_xdate(rotation=45, ha='center')
 
 show_plot(
